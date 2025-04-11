@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач</title>
+    <link rel="stylesheet" href="css/tasker.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script defer src="js/tasker.js"></script>
+</head>
+<body>
+    <main>
+
+        <form id="form-create-task" action="">
+            <label for="task-name">Введите текст задачи</label><br>
+            <input type="text" id="task-name"><br>
+            <input type="submit" id = "submitTask" value="Создать задачу"><br>
+            <label for="task-name">Срочная задача</label>
+            <input type="checkbox" id = "checkbox">
+        </form>
+        <div class="controls">
+            <button id="btn1">Сортировать по имени ↑</button>
+            <button id="btn2">Сортировать по имени ↓</button>
+            <button id="btn3">Оставить только срочные</button>
+            <input type="search" id="searchInput" placeholder="Введите текст задачи">
+            <button id="btn4">Фильтровать по имени</button>
+            <button id="btn5">Удалить все задачи</button>
+            <button id="btn6">Сбросить фильтры</button>
+        </div>
+        <div class="container">
+            <div class="task"><span>а Первая задача </span><i tabindex="0" class="bi bi-mouse btn-edit"></i> <i tabindex="0" class="bi bi-x-octagon btn-remove"></i></div>
+            <div class="task immediate"><span>б Вторая задача </span><i tabindex="0" class="bi bi-mouse btn-edit"></i> <i tabindex="0" class="bi bi-x-octagon btn-remove"></i></div>
+            <div class="task"><span>в Третья задача </span><i tabindex="0" class="bi bi-mouse btn-edit"></i> <i tabindex="0" class="bi bi-x-octagon btn-remove"></i></div>
+            <div class="task immediate"><span>г Четвертая задача </span><i tabindex="0" class="bi bi-mouse btn-edit"></i> <i tabindex="0" class="bi bi-x-octagon btn-remove"></i></div>
+            <div class="task immediate"><span>д Пятая задача </span><i tabindex="0" class="bi bi-mouse btn-edit"></i> <i tabindex="0" class="bi bi-x-octagon btn-remove"></i></div>
+            <div class="task"><span>е Шестая задача </span><i tabindex="0" class="bi bi-mouse btn-edit"></i> <i tabindex="0" class="bi bi-x-octagon btn-remove"></i></div>
+        </div>
+        </div>
+    </main>    
+</body>
+</html>

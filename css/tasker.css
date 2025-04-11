@@ -1,0 +1,68 @@
+main {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.container {
+    background-color:lavender ;
+    border: blueviolet 5px solid;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.task {
+    border: 1px solid violet;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+    background-color:blueviolet;
+}
+#form-create-task {
+    background-color:lavender ;
+    border: blueviolet 5px solid;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+}
+#form-create-task input {
+    margin-top: 10px;
+}
+#task-name {
+    background-color:azure;
+}
+.immediate::after {
+    content: "!";
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.btn-remove, .btn-edit {
+    cursor: pointer;
+    font-size: 18px;
+    color: darkblue;
+    margin-left: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-remove:hover, .btn-edit:hover, .btn-remove:focus, .btn-edit:focus {
+    color: beige;
+}
+#searchInput {
+    height: 50px;
+}
+.immediate {
+    border-color: red ;
+}
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+}
+.controls  button, input {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #2196F3;
+}
+.controls button:hover, #submitTask:hover {
+    background-color: #0b7dda;
+}
