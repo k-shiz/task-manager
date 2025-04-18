@@ -25,9 +25,9 @@ formCreateTask.addEventListener("submit", function(event){
 })
 
 function compare (a, b) {
-    if (a.innerHTML > b.innerHTML) return 1;
-    if (a.innerHTML == b.innerHTML) return 0;
-    if (a.innerHTML < b.innerHTML) return -1;
+    if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return 1;
+    if (a.querySelector("span").innerHTML == b.querySelector("span").innerHTML) return 0;
+    if (a.querySelector("span").innerHTML < b.querySelector("span").innerHTML) return -1;
 }
 btn1.addEventListener("click", function() {
     let newTasks = [...tasks].sort(compare);
@@ -39,9 +39,9 @@ btn1.addEventListener("click", function() {
 })
 
 function compareReverse(a, b) {
-    if (a.innerHTML < b.innerHTML) return 1;
-    if (a.innerHTML == b.innerHTML) return 0;
-    if (a.innerHTML > b.innerHTML) return -1;
+    if (a.querySelector("span").innerHTML < b.querySelector("span").innerHTML) return 1;
+    if (a.querySelector("span").innerHTML == b.querySelector("span").innerHTML) return 0;
+    if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return -1;
 }
 
 btn2.addEventListener("click", function() {
@@ -91,10 +91,15 @@ btn6.addEventListener("click", function() {
     tasks = document.querySelectorAll(".task");
 });
 
-// удаление задач
+// делегирование событий
 container.addEventListener("click", (event)=>{
     let btn = event.target; //элемент, на котором кликнул пользователь
+    // удаление задач
     if(btn.classList.contains("btn-remove")){ //если это кнопка удаления, то...
         btn.closest(".task").remove(); //удаляем задачу
+    }
+        //  редактирование задачи
+    if (btn.classList.contains("btn-edit")) {
+        btn.closest(".task").querySelector("span").setAttribute("contenteditable", "true")
     }
 })
